@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+.blogItem {
+  font-family: 'Roboto', sans-serif;
+  background: rgba(255, 255, 255, 0.37);
+  margin-top: 20px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  box-shadow: -11px 20px 26px -13px #0e0e0e; }
+  .blogItem img {
+    height: 100%; }
+  .blogItem span {
+    padding-left: 5%;
+    color: white;
+    font-size: 1.4em; }
+
+body {
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/darkdenim3.png"); }
+
+#app {
+  max-width: 1024px;
+  min-width: 600pxs;
+  margin: 0 auto; }
