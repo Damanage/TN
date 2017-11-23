@@ -8,7 +8,8 @@ const blogData =[
 		meta: {
 			name: 'Mr.Roudriguez',
 			date: moment().format("MMM Do YY"),
-			changeDate: '12.14.15'
+			changeDate: '12.14.15',
+			count: 4
 		}
 	},
 	{
@@ -17,7 +18,8 @@ const blogData =[
 		meta: {
 			name: 'Mr.Roudriguez',
 			date: moment().format("MMM Do YY"),
-			changeDate: '12.13.13'
+			changeDate: '12.03.13',
+			count: 8
 		}
 	},
 	{
@@ -26,7 +28,8 @@ const blogData =[
 		meta: {
 			name: 'Mr.Roudriguez',
 			date: moment().format("MMM Do YY"),
-			changeDate: '12.13.13'
+			changeDate: '12.13.18',
+			count: 3
 		}
 	},
 

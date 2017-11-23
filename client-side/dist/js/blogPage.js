@@ -17,6 +17,7 @@ var BlogPage = function (_React$Component) {
 		var _this = _possibleConstructorReturn(this, (BlogPage.__proto__ || Object.getPrototypeOf(BlogPage)).call(this, props));
 
 		_this.state = { blogData: blogData };
+
 		return _this;
 	}
 

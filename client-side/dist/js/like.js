@@ -8,9 +8,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var _ref = _,
-    bind = _ref.bind;
-
 var Like = function (_React$Component) {
 	_inherits(Like, _React$Component);
 
@@ -19,8 +16,7 @@ var Like = function (_React$Component) {
 
 		var _this = _possibleConstructorReturn(this, (Like.__proto__ || Object.getPrototypeOf(Like)).call(this, props));
 
-		_this.state = { count: props.count,
-			animate: props.animate };
+		_this.state = { count: _this.props.meta.count, animate: _this.props.animate };
 
 		_this.handleClick = _.bind(_this.handleClick, _this);
 		return _this;
@@ -28,14 +24,14 @@ var Like = function (_React$Component) {
 
 	_createClass(Like, [{
 		key: 'handleClick',
-		value: function handleClick(e) {
+		value: function handleClick() {
 			var _this2 = this;
 
-			var step = e.shiftKey ? 10 : 1;
-			this.setState({ count: this.state.count + step, animate: 'fa fa-heart-o animated bounceIn' });
+			this.setState({ count: this.state.count + 1, animate: 'fa fa-heart-o animated bounceIn' });
+
 			setTimeout(function () {
 				_this2.setState({ animate: 'fa fa-heart-o' });
-			}, 200);
+			}, 500);
 		}
 	}, {
 		key: 'render',

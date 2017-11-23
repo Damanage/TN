@@ -9,8 +9,10 @@ var BlogList = function BlogList(_ref) {
 			meta: {
 				name: '' + item.meta.name,
 				date: '' + item.meta.date,
-				changeDate: '' + item.meta.changeDate
+				changeDate: '' + item.meta.changeDate,
+				count: item.meta.count
 			}
+
 		});
 	}));
 };
@@ -22,7 +24,8 @@ BlogList.propTypes = {
 		meta: PropTypes.shape({
 			name: PropTypes.string,
 			date: PropTypes.string,
-			changeDate: PropTypes.string
+			changeDate: PropTypes.string,
+			count: PropTypes.number
 		})
 	}))
 };

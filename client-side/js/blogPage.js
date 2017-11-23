@@ -4,6 +4,7 @@ class BlogPage extends React.Component{
 		super(props);
 
 		this.state = {blogData};
+
 	};
 
 	render(){

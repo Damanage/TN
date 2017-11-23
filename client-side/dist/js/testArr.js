@@ -6,7 +6,8 @@ var blogData = [{
 	meta: {
 		name: 'Mr.Roudriguez',
 		date: moment().format("MMM Do YY"),
-		changeDate: '12.14.15'
+		changeDate: '12.14.15',
+		count: 4
 	}
 }, {
 	// link: 'https://vignette.wikia.nocookie.net/en.futurama/images/8/87/Bender_chasing_Tanya.jpg/revision/latest/zoom-crop/width/240/height/240?cb=20170828195903',
@@ -14,7 +15,8 @@ var blogData = [{
 	meta: {
 		name: 'Mr.Roudriguez',
 		date: moment().format("MMM Do YY"),
-		changeDate: '12.13.13'
+		changeDate: '12.03.13',
+		count: 8
 	}
 }, {
 	link: 'https://vignette.wikia.nocookie.net/villains/images/8/8f/The_Bender.jpg/revision/latest/scale-to-width-down/250?cb=20150929221610',
@@ -22,6 +24,7 @@ var blogData = [{
 	meta: {
 		name: 'Mr.Roudriguez',
 		date: moment().format("MMM Do YY"),
-		changeDate: '12.13.13'
+		changeDate: '12.13.18',
+		count: 3
 	}
 }];
