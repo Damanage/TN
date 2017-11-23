@@ -2,7 +2,7 @@ class MetaData extends React.Component{
 	render(){
 		const {date, name, changeDate} = this.props.meta;
 		return React.createElement('div',{className:'metaData'},
-			React.createElement('span',{},name),
+			React.createElement('span',{className:'name'},name),
 			React.createElement('span',{},date),
 			React.createElement('span',{}, 'last change: ' + changeDate)
 		)

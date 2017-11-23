@@ -25,7 +25,7 @@ var MetaData = function (_React$Component) {
 			    name = _props$meta.name,
 			    changeDate = _props$meta.changeDate;
 
-			return React.createElement('div', { className: 'metaData' }, React.createElement('span', {}, name), React.createElement('span', {}, date), React.createElement('span', {}, 'last change: ' + changeDate));
+			return React.createElement('div', { className: 'metaData' }, React.createElement('span', { className: 'name' }, name), React.createElement('span', {}, date), React.createElement('span', {}, 'last change: ' + changeDate));
 		}
 	}]);
 

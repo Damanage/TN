@@ -12,7 +12,7 @@ const blogData =[
 		}
 	},
 	{
-		link: 'https://vignette.wikia.nocookie.net/en.futurama/images/8/87/Bender_chasing_Tanya.jpg/revision/latest/zoom-crop/width/240/height/240?cb=20170828195903',
+		// link: 'https://vignette.wikia.nocookie.net/en.futurama/images/8/87/Bender_chasing_Tanya.jpg/revision/latest/zoom-crop/width/240/height/240?cb=20170828195903',
 		text: 'Afterlife? If I thought I had to live another life, I’d kill myself right now!',
 		meta: {
 			name: 'Mr.Roudriguez',
@@ -22,7 +22,7 @@ const blogData =[
 	},
 	{
 		link: 'https://vignette.wikia.nocookie.net/villains/images/8/8f/The_Bender.jpg/revision/latest/scale-to-width-down/250?cb=20150929221610',
-		text: 'I’m Bender, baby! Oh god, please insert liquor!',
+		// text: 'I’m Bender, baby! Oh god, please insert liquor!',
 		meta: {
 			name: 'Mr.Roudriguez',
 			date: moment().format("MMM Do YY"),
