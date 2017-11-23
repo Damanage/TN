@@ -1,4 +1,3 @@
-
 const BlogList = ({blogData})=>(
 		React.createElement(
 			'div',
