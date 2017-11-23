@@ -20,7 +20,7 @@ var TextBox = function (_React$Component) {
 	_createClass(TextBox, [{
 		key: 'render',
 		value: function render() {
-			return React.createElement('span', {}, '' + this.props.text);
+			return this.props.text === 'undefined' || React.createElement('span', {}, '' + this.props.text);
 		}
 	}]);
 
@@ -28,3 +28,10 @@ var TextBox = function (_React$Component) {
 }(React.Component);
 
 ;
+
+TextBox.propTypes = {
+	text: PropTypes.string
+};
+TextBox.defaultProps = {
+	text: "Lorem Ipsum"
+};

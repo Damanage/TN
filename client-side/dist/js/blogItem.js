@@ -20,7 +20,8 @@ var BlogItem = function (_React$Component) {
 	_createClass(BlogItem, [{
 		key: 'render',
 		value: function render() {
-			return React.createElement('div', { className: 'blogItem' }, React.createElement(BlogImage, { link: '' + this.props.imgLink }), React.createElement(TextBox, { text: '' + this.props.blogText }));
+
+			return React.createElement('div', { className: 'blogItem' }, React.createElement(MetaData, _.assign({}, this.props)), React.createElement(BlogMessage, _.assign({}, this.props)), React.createElement(Like, _.assign({}, this.props)));
 		}
 	}]);
 
@@ -28,3 +29,9 @@ var BlogItem = function (_React$Component) {
 }(React.Component);
 
 ;
+
+BlogItem.propTypes = {
+	meta: PropTypes.object,
+	blogText: PropTypes.string,
+	imgLink: PropTypes.string
+};

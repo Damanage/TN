@@ -8,34 +8,41 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var BlogImage = function (_React$Component) {
-	_inherits(BlogImage, _React$Component);
+var MetaData = function (_React$Component) {
+	_inherits(MetaData, _React$Component);
 
-	function BlogImage() {
-		_classCallCheck(this, BlogImage);
+	function MetaData() {
+		_classCallCheck(this, MetaData);
 
-		return _possibleConstructorReturn(this, (BlogImage.__proto__ || Object.getPrototypeOf(BlogImage)).apply(this, arguments));
+		return _possibleConstructorReturn(this, (MetaData.__proto__ || Object.getPrototypeOf(MetaData)).apply(this, arguments));
 	}
 
-	_createClass(BlogImage, [{
+	_createClass(MetaData, [{
 		key: 'render',
 		value: function render() {
-			return this.props.link === 'undefined' || React.createElement('img', {
-				src: '' + this.props.link,
-				width: '250px',
-				height: '250px',
-				alt: 'rodriguez'
-			});
+			var _props$meta = this.props.meta,
+			    date = _props$meta.date,
+			    name = _props$meta.name,
+			    changeDate = _props$meta.changeDate;
+
+			return React.createElement('div', { className: 'metaData' }, React.createElement('span', {}, name), React.createElement('span', {}, date), React.createElement('span', {}, 'last change: ' + changeDate));
 		}
 	}]);
 
-	return BlogImage;
+	return MetaData;
 }(React.Component);
 
-;
-BlogImage.defaultProps = {
-	link: 'https://vignette.wikia.nocookie.net/en.futurama/images/7/70/BenderTheOffender.jpg/revision/latest/scale-to-width-down/250?cb=20110614181253'
+MetaData.propTypes = {
+	meta: PropTypes.shape({
+		name: PropTypes.string,
+		date: PropTypes.string,
+		changeDate: PropTypes.string
+	})
 };
-BlogImage.propTypes = {
-	link: PropTypes.string
+MetaData.defaultProps = {
+	meta: {
+		name: 'place for name',
+		date: 'place for date',
+		changeDate: 'place for changing date'
+	}
 };

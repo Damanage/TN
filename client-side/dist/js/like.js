@@ -8,34 +8,54 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var BlogImage = function (_React$Component) {
-	_inherits(BlogImage, _React$Component);
+var _ref = _,
+    bind = _ref.bind;
 
-	function BlogImage() {
-		_classCallCheck(this, BlogImage);
+var Like = function (_React$Component) {
+	_inherits(Like, _React$Component);
 
-		return _possibleConstructorReturn(this, (BlogImage.__proto__ || Object.getPrototypeOf(BlogImage)).apply(this, arguments));
+	function Like(props) {
+		_classCallCheck(this, Like);
+
+		var _this = _possibleConstructorReturn(this, (Like.__proto__ || Object.getPrototypeOf(Like)).call(this, props));
+
+		_this.state = { count: props.count,
+			animate: props.animate };
+
+		_this.handleClick = _.bind(_this.handleClick, _this);
+		return _this;
 	}
 
-	_createClass(BlogImage, [{
+	_createClass(Like, [{
+		key: 'handleClick',
+		value: function handleClick(e) {
+			var _this2 = this;
+
+			var step = e.shiftKey ? 10 : 1;
+			this.setState({ count: this.state.count + step, animate: 'fa fa-heart-o animated bounceIn' });
+			setTimeout(function () {
+				_this2.setState({ animate: 'fa fa-heart-o' });
+			}, 200);
+		}
+	}, {
 		key: 'render',
 		value: function render() {
-			return this.props.link === 'undefined' || React.createElement('img', {
-				src: '' + this.props.link,
-				width: '250px',
-				height: '250px',
-				alt: 'rodriguez'
-			});
+			return React.createElement('div', { className: 'like' }, React.createElement('i', { onClick: this.handleClick,
+				className: '' + this.state.animate,
+				areahidden: 'true'
+			}), React.createElement('span', { className: 'count' }, '' + this.state.count));
 		}
 	}]);
 
-	return BlogImage;
+	return Like;
 }(React.Component);
 
-;
-BlogImage.defaultProps = {
-	link: 'https://vignette.wikia.nocookie.net/en.futurama/images/7/70/BenderTheOffender.jpg/revision/latest/scale-to-width-down/250?cb=20110614181253'
+Like.defaultProps = {
+	animate: 'fa fa-heart-o',
+	count: 1
 };
-BlogImage.propTypes = {
-	link: PropTypes.string
+
+Like.propTypes = {
+	count: PropTypes.number,
+	animate: PropTypes.string
 };

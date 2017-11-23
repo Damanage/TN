@@ -13,4 +13,7 @@ class BlogPage extends React.Component{
 	}
 }
 
+
 ReactDOM.render(React.createElement(BlogPage), document.getElementById('app'))
+
+

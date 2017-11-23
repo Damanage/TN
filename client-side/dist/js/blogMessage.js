@@ -8,34 +8,31 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var BlogImage = function (_React$Component) {
-	_inherits(BlogImage, _React$Component);
+var BlogMessage = function (_React$Component) {
+	_inherits(BlogMessage, _React$Component);
 
-	function BlogImage() {
-		_classCallCheck(this, BlogImage);
+	function BlogMessage() {
+		_classCallCheck(this, BlogMessage);
 
-		return _possibleConstructorReturn(this, (BlogImage.__proto__ || Object.getPrototypeOf(BlogImage)).apply(this, arguments));
+		return _possibleConstructorReturn(this, (BlogMessage.__proto__ || Object.getPrototypeOf(BlogMessage)).apply(this, arguments));
 	}
 
-	_createClass(BlogImage, [{
+	_createClass(BlogMessage, [{
 		key: 'render',
 		value: function render() {
-			return this.props.link === 'undefined' || React.createElement('img', {
-				src: '' + this.props.link,
-				width: '250px',
-				height: '250px',
-				alt: 'rodriguez'
-			});
+			var _props = this.props,
+			    imgLink = _props.imgLink,
+			    blogText = _props.blogText;
+
+
+			return React.createElement('div', { className: 'blogMessage' }, React.createElement(BlogImage, { link: imgLink }), React.createElement(TextBox, { text: blogText }));
 		}
 	}]);
 
-	return BlogImage;
+	return BlogMessage;
 }(React.Component);
 
-;
-BlogImage.defaultProps = {
-	link: 'https://vignette.wikia.nocookie.net/en.futurama/images/7/70/BenderTheOffender.jpg/revision/latest/scale-to-width-down/250?cb=20110614181253'
-};
-BlogImage.propTypes = {
-	link: PropTypes.string
+BlogMessage.propTypes = {
+	blogText: PropTypes.string,
+	imgLink: PropTypes.string
 };
