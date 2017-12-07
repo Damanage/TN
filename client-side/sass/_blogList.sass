@@ -3,18 +3,49 @@
 	
 
 .blogItem
+	min-height: 260px
+	max-height: 350px
 	font-family: 'Roboto', sans-serif
 	background: rgba(255, 255, 255, 0.37)
 	margin-top: 20px
-	display: flex
-	justify-content: left
-	align-items: center
 	box-shadow: -11px 20px 26px -13px #0e0e0e
-	img
-		height: 100%
-	span
-		padding-left: 5%
-		color: white
-		font-size: 1.4em
+	.metaData
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		span
+			padding: 15px 0 15px 20px
+			color: #bfbdbd
+		.name
+			color: white
+			font-size: 1.2em
+	.blogMessage
+		max-height: 300px
+		min-height: 250px
+		display: flex
+		justify-content: space-around
+		align-items: center
+		img
+			
+		span
+			padding-left: 5%
+			color: white
+			font-size: 1.4em
+	.like
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		i
+			cursor: pointer
+			padding: 5px
+			color: white
+			font-size: 25px
+		span
+			display: block
+			padding: 10px
+			color: white
+			font-size: 1.4em
+			
+
 		
 		

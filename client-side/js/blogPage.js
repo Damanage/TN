@@ -4,6 +4,7 @@ class BlogPage extends React.Component{
 		super(props);
 
 		this.state = {blogData};
+
 	};
 
 	render(){
@@ -13,4 +14,7 @@ class BlogPage extends React.Component{
 	}
 }
 
+
 ReactDOM.render(React.createElement(BlogPage), document.getElementById('app'))
+
+
